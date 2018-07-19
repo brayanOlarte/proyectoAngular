@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioComponent implements OnInit {
 
+private datos: any = {};
 /*  public retPostData;
 	public retGetData;
 	datosMostrar: any = {};
@@ -23,9 +24,10 @@ export class InicioComponent implements OnInit {
   //  this.datos.nombre= "";
   //	this.datosMostrar.FstVarValues= "chao";
   }
-/*  public imprimir(){
-  	console.log( this.datos );
-  }
+  public imprimir(){
+     console.log( this.datos );
+   }
+/*
   public PostData() {
   		const url = "" ;
   		let datos = {FstVarValues: 'hola', SndVarValues: 'hola mundo'};

@@ -6,8 +6,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ServiciosService {
-
-  constructor(private http: HttpClient ) { }
+  private url: anyv = "http://localhost/API-proyecto-angular/";
+  constructor(private http: HttpClient ) {
+   }
 
   /**
      * Envia la solicitud a la Api para la creacion del perfil del profesional
@@ -20,7 +21,7 @@ export class ServiciosService {
       let accion = 'crearProfesional/';
 
 
-      return this.http.post<ResponseInformationObjectInterface>( accion, datosProfesional );
+      return this.http.post( this.url+accion, datosProfesional );
 
     }
 
